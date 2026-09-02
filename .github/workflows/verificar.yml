@@ -1,0 +1,10 @@
+name: verificar site 
+on: [push]
+jobs:
+  verificar:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: verificar index.html
+        run: test -f index.html
